@@ -1,0 +1,20 @@
+[Unit]
+Description=Hydrodactyl Wings Daemon
+After=docker.service
+Requires=docker.service
+BindsTo=docker.service
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/etc/pterodactyl
+LimitNOFILE=4096
+PIDFile=/var/run/wings/pid.pid
+ExecStart=/usr/local/bin/wings
+Restart=on-failure
+StartLimitInterval=180
+StartLimitBurst=30
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
