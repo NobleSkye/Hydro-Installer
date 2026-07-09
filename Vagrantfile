@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.network "public_network", :dev => "eno1"
+  config.vm.network "private_network", type: "dhcp"
 
   config.vm.provision "shell",
     inline: "ln -sf /vagrant/lib/lib.sh /tmp/lib.sh"
