@@ -1,4 +1,4 @@
-# hydro-installer
+# Hydrodactyl Panel & Wings Automated Installer & Uninstaller
 
 Unofficial installation scripts for [Hydrodactyl Panel](https://hydrodactyl.dev/) & [Wings](https://pterodactyl.io/wings/1.0/installing.html). Visit [gethydro.cc](https://gethydro.cc) for more info. This script is not associated with the official Hydrodactyl Project.
 
