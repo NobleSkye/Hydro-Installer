@@ -16,6 +16,10 @@ Unofficial installation scripts for [Hydrodactyl Panel](https://hydrodactyl.dev/
 
 List of supported operating systems for Panel and Wings.
 
+:white_check_mark: = Supported & Tested
+:warning: = Supported but not tested
+:red_square: = Not supported
+
 | Operating System | Version | Supported          |
 | ---------------- | ------- | ------------------ |
 | Ubuntu           | 22.04   | :white_check_mark: |
