@@ -53,6 +53,10 @@ The installer can optionally configure UFW (Ubuntu/Debian) or firewalld (Rocky/A
 
 Both the Panel and Wings installers can optionally obtain and configure Let's Encrypt SSL certificates automatically.
 
+## Special Mentions
+
+This project is a fork / inspired by [pterodactyl-installer/pterodactyl-installer](https://github.com/pterodactyl-installer/pterodactyl-installer), but heavily modified to support Hydrodactyl's Docker-based panel setup.
+
 ## License
 
 GNU General Public License v3.0
