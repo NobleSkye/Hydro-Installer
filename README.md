@@ -29,10 +29,12 @@ List of supported operating systems for Panel and Wings.
 |                  | 11      | :white_check_mark: |
 |                  | 12      | :white_check_mark: |
 |                  | 13      | :white_check_mark: |
-| Rocky Linux      | 8       | :white_check_mark: |
-|                  | 9       | :white_check_mark: |
-| AlmaLinux        | 8       | :white_check_mark: |
-|                  | 9       | :white_check_mark: |
+| Rocky Linux      | 8       | :warning: |
+|                  | 9       | :warning: |
+| AlmaLinux        | 8       | :warning: |
+|                  | 9       | :warning: |
+
+Becuase Hyrodactyl is docker based support will vary per system
 
 ## Usage
 
