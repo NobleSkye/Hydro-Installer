@@ -1,6 +1,6 @@
 # hydro-installer
 
-Unofficial installation scripts for Hydrodactyl Panel & Wings. Visit [gethydro.cc](https://gethydro.cc) for more info. This script is not associated with the official Hydrodactyl Project.
+Unofficial installation scripts for [Hydrodactyl Panel](https://hydrodactyl.dev/) & [Wings](https://pterodactyl.io/wings/1.0/installing.html). Visit [gethydro.cc](https://gethydro.cc) for more info. This script is not associated with the official Hydrodactyl Project.
 
 ## Features
 
@@ -34,6 +34,7 @@ List of supported operating systems for Panel and Wings.
 
 Run the script as root. You will be prompted to choose between installing Docker only, the Panel, Wings, or both.
 
+(temp until dns resolves gethydro.cc)
 ```bash
 bash <(curl -sSL https://raw.githubusercontent.com/NobleSkye/Hydro-Installer/master/install.sh)
 ```
