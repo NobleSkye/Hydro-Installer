@@ -7,13 +7,13 @@ set -e
 # Project 'hydro-installer'                                                          #
 #                                                                                    #
 # Hydrodactyl panel & wings installer                                                #
-# https://github.com/nobleskye/gethydro.cc                                           #
+# https://github.com/NobleSkye/Hydro-Installer                                       #
 #                                                                                    #
 ######################################################################################
 
-export GITHUB_SOURCE="v1.0.0"
-export SCRIPT_RELEASE="v1.0.0"
-export GITHUB_BASE_URL="https://raw.githubusercontent.com/nobleskye/gethydro.cc"
+export GITHUB_SOURCE="master"
+export SCRIPT_RELEASE="canary"
+export GITHUB_BASE_URL="https://raw.githubusercontent.com/NobleSkye/Hydro-Installer"
 
 LOG_PATH="/var/log/hydro-installer.log"
 
@@ -32,7 +32,7 @@ if [ -f "$SCRIPT_DIR/lib/lib.sh" ]; then
 else
   # Always remove lib.sh, before downloading it
   [ -f /tmp/lib.sh ] && rm -rf /tmp/lib.sh
-  curl -sSL -o /tmp/lib.sh "$GITHUB_BASE_URL"/main/lib/lib.sh
+  curl -sSL -o /tmp/lib.sh "$GITHUB_BASE_URL"/master/lib/lib.sh
   # shellcheck source=/tmp/lib.sh
   source /tmp/lib.sh
 fi

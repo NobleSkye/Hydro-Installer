@@ -26,7 +26,7 @@ set -e
 # ------------------ Variables ----------------- #
 
 # Versioning
-export GITHUB_SOURCE=${GITHUB_SOURCE:-main}
+export GITHUB_SOURCE=${GITHUB_SOURCE:-master}
 export SCRIPT_RELEASE=${SCRIPT_RELEASE:-canary}
 
 # Path
@@ -42,7 +42,7 @@ export SUPPORTED=false
 # download URLs
 export HYDRO_COMPOSE_URL="https://raw.githubusercontent.com/blueprintframework/hydrodactyl/main/docker-compose.example.yml"
 export WINGS_DL_BASE_URL="https://github.com/pterodactyl/wings/releases/latest/download/wings_linux_"
-export GITHUB_BASE_URL=${GITHUB_BASE_URL:-"https://raw.githubusercontent.com/nobleskye/gethydro.cc"}
+export GITHUB_BASE_URL=${GITHUB_BASE_URL:-"https://raw.githubusercontent.com/NobleSkye/Hydro-Installer"}
 export GITHUB_URL="$GITHUB_BASE_URL/$GITHUB_SOURCE"
 
 # Local paths (set when sourced locally)
