@@ -25,12 +25,6 @@ email="${email:-}"
 
 INSTALL_DIR="${INSTALL_DIR:-/srv/hydrodactyl}"
 
-user_email="${user_email:-}"
-user_username="${user_username:-}"
-user_firstname="${user_firstname:-}"
-user_lastname="${user_lastname:-}"
-user_password="${user_password:-}"
-
 # --------- Main installation functions -------- #
 
 install_docker_compose() {
@@ -102,30 +96,6 @@ start_panel() {
   output "Panel should be accessible at: $APP_URL"
 }
 
-create_admin_user() {
-  output "Creating admin user..."
-
-  cd "$INSTALL_DIR" || exit
-
-  output "Waiting for panel to be ready..."
-  for i in $(seq 1 30); do
-    if docker compose exec -T panel php artisan p:user:make \
-      --email="$user_email" \
-      --username="$user_username" \
-      --name-first="$user_firstname" \
-      --name-last="$user_lastname" \
-      --password="$user_password" \
-      --admin=1 2>/dev/null; then
-      success "Admin user created!"
-      return 0
-    fi
-    sleep 2
-  done
-
-  warning "Could not create admin user automatically."
-  warning "Please run manually: docker compose exec panel php artisan p:user:make"
-}
-
 # --------------- Main functions --------------- #
 
 perform_install() {
@@ -138,7 +108,6 @@ perform_install() {
 
   if start_panel_prompt; then
     start_panel
-    create_admin_user
   fi
 
   return 0

@@ -14,11 +14,7 @@ FQDN=""
 email=""
 timezone="UTC"
 LE_EMAIL=""
-user_email=""
-user_username=""
-user_firstname=""
-user_lastname=""
-user_password=""
+
 MYSQL_PASSWORD=""
 INSTALL_DIR="/srv/hydrodactyl"
 ASSUME_SSL=false
@@ -78,16 +74,6 @@ main() {
   fi
 
   print_brake 50
-  output "Admin account setup"
-  print_brake 50
-
-  email_input user_email "Email address for the admin account: " "Email cannot be empty or invalid"
-  required_input user_username "Username for the admin account: " "Username cannot be empty"
-  required_input user_firstname "First name for the admin account: " "Name cannot be empty"
-  required_input user_lastname "Last name for the admin account: " "Name cannot be empty"
-  password_input user_password "Password for the admin account: " "Password cannot be empty"
-
-  print_brake 50
   output "Installation Summary"
   print_brake 50
   output "FQDN: $FQDN"
@@ -96,15 +82,13 @@ main() {
   output "Timezone: $timezone"
   output "Let's Encrypt: $CONFIGURE_LETSENCRYPT"
   [ "$CONFIGURE_LETSENCRYPT" == true ] && output "LE Email: $LE_EMAIL"
-  output "Admin user: $user_username ($user_email)"
   print_brake 50
 
   echo -e -n "\n* Proceed with installation? (y/N): "
   read -r CONFIRM
   if [[ "$CONFIRM" =~ [Yy] ]]; then
     export FQDN email timezone MYSQL_PASSWORD \
-      ASSUME_SSL CONFIGURE_LETSENCRYPT LE_EMAIL \
-      user_email user_username user_firstname user_lastname user_password INSTALL_DIR
+      ASSUME_SSL CONFIGURE_LETSENCRYPT LE_EMAIL INSTALL_DIR
     run_installer "panel"
   else
     error "Installation aborted."
@@ -117,6 +101,9 @@ goodbye() {
   output "Hydrodactyl panel installation completed!"
   output ""
   output "Your panel should be accessible at: http${ASSUME_SSL:+s}://$FQDN"
+  output ""
+  output "Create your admin user:"
+  output "  cd $INSTALL_DIR && docker compose exec panel php artisan p:user:make"
   output ""
   output "Installation directory: $INSTALL_DIR"
   output "Thank you for using Hydro-Installer."
