@@ -63,6 +63,7 @@ while [ "$done" == false ]; do
     "Install Hydrodactyl Panel (Docker + Docker Compose + Panel)"
     "Install Wings (Docker + Wings daemon)"
     "Install both Panel and Wings on the same machine"
+    "Uninstall panel or wings"
   )
 
   actions=(
@@ -70,6 +71,7 @@ while [ "$done" == false ]; do
     "panel"
     "wings"
     "panel;wings"
+    "uninstall"
   )
 
   output "What would you like to do?"
