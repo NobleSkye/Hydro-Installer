@@ -54,7 +54,7 @@ execute() {
   fi
 }
 
-welcome "" 
+welcome ""
 
 done=false
 while [ "$done" == false ]; do
