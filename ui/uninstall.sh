@@ -10,6 +10,7 @@ fi
 
 RM_PANEL=false
 RM_WINGS=false
+RM_DB=false
 
 main() {
   welcome
@@ -35,15 +36,22 @@ main() {
     exit 1
   fi
 
+  if (command -v mariadb &>/dev/null || command -v mysql &>/dev/null); then
+    echo -e -n "* Remove panel database and user? (y/N): "
+    read -r CONFIRM_DB
+    [[ "$CONFIRM_DB" =~ [Yy] ]] && RM_DB=true
+  fi
+
   print_brake 50
   [ "$RM_PANEL" == true ] && output "Panel: will be removed"
   [ "$RM_WINGS" == true ] && output "Wings: will be removed"
+  [ "$RM_DB" == true ] && output "Database: will be removed"
   print_brake 50
 
   echo -e -n "\n* Proceed with uninstallation? (y/N): "
   read -r CONFIRM
   if [[ "$CONFIRM" =~ [Yy] ]]; then
-    export RM_PANEL RM_WINGS
+    export RM_PANEL RM_WINGS RM_DB
     run_installer "uninstall"
   else
     error "Uninstallation aborted."
