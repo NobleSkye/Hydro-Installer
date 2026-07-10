@@ -1,6 +1,6 @@
 # Hydrodactyl Panel & Wings Automated Installer & Uninstaller
 
-Unofficial installation scripts for [Hydrodactyl Panel](https://hydrodactyl.dev/) & [Wings](https://pterodactyl.io/wings/1.0/installing.html). Visit [gethydro.cc](https://gethydro.cc) for more info. This script is not associated with the official Hydrodactyl Project.
+Unofficial installation scripts for [Hydrodactyl Panel](https://hydrodactyl.dev/) & [Wings](https://pterodactyl.io/wings/1.0/installing.html). This script is not associated with the official Hydrodactyl Project.
 
 ## Features
 
@@ -29,10 +29,10 @@ List of supported operating systems for Panel and Wings.
 |                  | 11      | :white_check_mark: |
 |                  | 12      | :white_check_mark: |
 |                  | 13      | :white_check_mark: |
-| Rocky Linux      | 8       | :warning: |
-|                  | 9       | :warning: |
-| AlmaLinux        | 8       | :warning: |
-|                  | 9       | :warning: |
+| Rocky Linux      | 8       | :white_check_mark: |
+|                  | 9       | :white_check_mark: |
+| AlmaLinux        | 8       | :white_check_mark: |
+|                  | 9       | :white_check_mark: |
 
 Becuase Hyrodactyl is docker based support will vary per system
 
