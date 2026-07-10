@@ -616,6 +616,16 @@ info() {
   echo -e "* ${COLOR_BLUE}INFO${COLOR_NC}: $1"
 }
 
+# ------------------ MySQL Helpers ----------------- #
+
+create_db_user() {
+  mysql -u root -e "CREATE USER IF NOT EXISTS '${1}'@'${3}' IDENTIFIED BY '${2}';"
+}
+
+grant_all_privileges() {
+  mysql -u root -e "GRANT ALL PRIVILEGES ON ${1}.* TO '${2}'@'${3}';"
+}
+
 # ------------------ Boolean Input ----------------- #
 
 bool_input() {
