@@ -61,7 +61,7 @@ Both the Panel and Wings installers can optionally obtain and configure Let's En
 
 ## Special Mentions
 
-This project is a fork / inspired by [pterodactyl-installer/pterodactyl-installer](https://github.com/pterodactyl-installer/pterodactyl-installer), but heavily modified to support Hydrodactyl's Docker-based panel setup.
+This project is a fork that is inspired by [pterodactyl-installer/pterodactyl-installer](https://github.com/pterodactyl-installer/pterodactyl-installer) & [Pyrodactyl Installer](https://github.com/Muspelheim-Hosting/pyrodactyl-installer) 
 
 ## License
 
