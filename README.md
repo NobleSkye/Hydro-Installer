@@ -40,15 +40,14 @@ Becuase Hyrodactyl is docker based support will vary per system
 
 Run the script as root. You will be prompted to choose between installing Docker only, the Panel, Wings, or both.
 
-(temp until dns resolves gethydro.cc)
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/NobleSkye/Hydro-Installer/master/install.sh)
+bash <(curl -fsSL https://gethydro.cc)
 ```
 
-Once gethydro.cc is live, you'll also be able to use:
+If `gethydro.cc` is unavailable, use the GitHub mirror:
 
 ```bash
-bash <(curl -sSL https://gethydro.cc)
+bash <(curl -fsSL https://raw.githubusercontent.com/NobleSkye/Hydro-Installer/master/install.sh)
 ```
 
 ## Firewall
