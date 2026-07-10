@@ -158,7 +158,7 @@ print_header() {
   echo -ne "\033[0;37;40m          \033[0;95;1;40mY8\033[0;35;40mb\033[0;37;40m \033[0;35;40md8\033[0;90;1;40m8P\033[0;37;40m                                                                                                  \033[0m"
   echo -ne "\033[0;37;40m           \033[0;35;40m\"Y8\033[0;90;1;40m8P\"\033[0;37;40m                                                                                                   \033[0m"
   echo -e "\033[0m"
-  echo -e "    ${COLOR_CYAN}Version:${COLOR_NC} ${SCRIPT_RELEASE}  ${COLOR_CYAN}|${COLOR_NC}  ${COLOR_CYAN}By:${COLOR_NC} NobleSkye"
+  echo -e "    ${COLOR_CYAN}Version:${COLOR_NC} ${SCRIPT_RELEASE}  ${COLOR_CYAN}|${COLOR_NC}  ${COLOR_CYAN}by${COLOR_NC} NobleSkye"
   echo ""
 }
 

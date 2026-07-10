@@ -132,22 +132,6 @@ show_welcome() {
   welcome
 
   check_installations
-
-  if [ "$PANEL_INSTALLED" == true ]; then
-    echo -e "  ${COLOR_GREEN}✓${COLOR_NC} Panel installed"
-  else
-    echo -e "  ${COLOR_RED}✗${COLOR_NC} Panel not installed"
-  fi
-
-  if [ "$WINGS_INSTALLED" == true ]; then
-    echo -e "  ${COLOR_GREEN}✓${COLOR_NC} Wings installed"
-  else
-    echo -e "  ${COLOR_RED}✗${COLOR_NC} Wings not installed"
-  fi
-
-  echo ""
-  print_brake 70
-  echo ""
 }
 
 show_menu() {
