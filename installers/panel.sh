@@ -62,14 +62,15 @@ configure_compose() {
   mysql_root_password=$(gen_passwd 32)
   DB_PASSWORD="$MYSQL_PASSWORD"
 
-  sed -i "s|CHANGE_ME|$MYSQL_PASSWORD|g" docker-compose.yml
-  sed -i "s|CHANGE_ME_TOO|$mysql_root_password|g" docker-compose.yml
-  sed -i "s|http://example.com|$APP_URL|g" docker-compose.yml
-  sed -i "s|UTC|$timezone|g" docker-compose.yml
-  sed -i "s|noreply@example.com|$email|g" docker-compose.yml
+  d=$'\x01'
+  sed -i "s${d}CHANGE_ME${d}${MYSQL_PASSWORD}${d}g" docker-compose.yml
+  sed -i "s${d}CHANGE_ME_TOO${d}${mysql_root_password}${d}g" docker-compose.yml
+  sed -i "s${d}http://example.com${d}${APP_URL}${d}g" docker-compose.yml
+  sed -i "s${d}UTC${d}${timezone}${d}g" docker-compose.yml
+  sed -i "s${d}noreply@example.com${d}${email}${d}g" docker-compose.yml
 
   if [ "$CONFIGURE_LETSENCRYPT" == true ] && [ -n "$LE_EMAIL" ]; then
-    sed -i "s|# LE_EMAIL: \"\"|LE_EMAIL: \"$LE_EMAIL\"|g" docker-compose.yml
+    sed -i "s${d}# LE_EMAIL: \"\"${d}LE_EMAIL: \"${LE_EMAIL}\"${d}g" docker-compose.yml
   fi
 
   success "docker-compose.yml configured!"
